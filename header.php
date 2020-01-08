@@ -28,6 +28,9 @@ session_start();
     <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="css/maps/customCss/styles.css" rel="stylesheet">
+<!--Link for font -awesome icon-->
+<!--  -->
     <!-- Data Tables-->
     <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
@@ -70,6 +73,11 @@ session_start();
                     <ul class="nav child_menu">
                       <li><a href="index.php">Down Node</a></li>
                       <li><a href="nodelist.php">All Node</a></li>
+			 <li><a href="add_dept.php">Add Department</a></li>
+			 <li><a href="add_reasons.php">Add Reasons</a></li>
+			 <li><a href="add_sub_reasons.php">Add Sub-Reasons</a></li>
+
+			<li><a href="action.php">Acknowlegde</a></li>
                     </ul>
                   </li>
 		<li><a><i class="fa fa-wifi"></i> Hotspot <span class="fa fa-chevron-down"></span></a>
@@ -113,7 +121,7 @@ session_start();
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt=""><?php echo $_session['username']?>
+                    <img src="images/img.jpg" alt=""><?php echo $_SESSION['username']?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="javascript:;"> Profile</a>

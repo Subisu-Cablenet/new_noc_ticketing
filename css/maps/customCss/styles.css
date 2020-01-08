@@ -1,0 +1,13 @@
+.action_data{
+		font-size:1.2em;
+		color:#000;
+}
+.action_label{
+		font-size:1.6em;
+}
+
+.centerForm{
+		display:block;
+		width:80%;
+		margin: 0 auto;
+}
