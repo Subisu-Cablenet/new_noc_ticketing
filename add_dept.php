@@ -2,7 +2,7 @@
 include ('conf.php');
 include ('header.php');
 ?>
-
+//Comment initiation
 <center>
 	<h1>Add Department</h1>
 </center>
