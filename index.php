@@ -83,7 +83,7 @@ while($row = mysqli_fetch_array($result))
 		echo "<td>".$row['Duration']."</td>";
 		echo "<td>
 		<div class='btn-group mr-2' role='group' aria-label='First group'>
-		<a href='action1.php?host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."' class='btn btn-secondary mr-2' name='sagar'>Sag</a> <a href='action2.php?hostname=".$row['hostname']."&host_port=".$row['interface']."&port_desc=".$row['description']."&port_dtime=".$row['Duration']."' class='btn btn-secondary'>Nav</a>
+		<a href='action1.php?host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."' class='btn btn-secondary mr-2' name='Sagar'>ACK</a>
 		</div>
 				</td>";
 		echo "</tr>";

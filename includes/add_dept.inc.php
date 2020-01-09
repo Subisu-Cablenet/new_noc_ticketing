@@ -45,7 +45,7 @@
 		
 		else{
 		
-		 header("refresh:1;url=../add_dept.php?status=".$status.");
+		 header("refresh:1;url=../add_dept.php?status=".$status);
 
 }
 }

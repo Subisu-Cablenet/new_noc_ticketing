@@ -32,12 +32,14 @@ include ('header.php');
                 <label for="status" class="col-sm-2 col-form-label">Status</label>
                  <div class="col-sm-10">
                         <select class="form-control" name="status">
-				<option value="<?php
-						if($_GET['status']){echo '$_GET["status"]';}
-						else{echo '1'}?>">Active</option>
-				<option value="<?php
-						if($_GET['status']){echo '$_GET["status"]';}
-						else{echo '0'}?>">Deactive</option>
+														<option value="1">Active</option>
+														<option value="0"
+														<?php
+														if($_GET['status']==0){
+														echo 'selected';
+														}
+														?>
+														">Deactive</option>
 			</select>
                 </div>
  
