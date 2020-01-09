@@ -3,31 +3,7 @@ include ('conf.php');
 include ('header.php');
 ?>
 
-<!--<div class="row" id="nodetable" style="display: inline-block;" >
-		<div class="tile_count">
-						<div class="col-md-3 col-sm-4  tile_stats_count">
-								<span class="count_top"><i class="fa fa-user"></i> Total Nodes</span>
-								<div class="count black">2,300</div>
-							</div>
-							<div class="col-md-3 col-sm-4  tile_stats_count">
-									<span class="count_top"><i class="fa fa-user"></i> Up Nodes</span>
-									<div class="count green">2,273</div>
-								</div>
-								<div class="col-md-2 col-sm-4  tile_stats_count">
-									<span class="count_top"><i class="fa fa-user"></i>Down Nodes</span>
-									<div class="count red">27</div>
-								</div>
-
-							<div class="col-md-4 col-sm-4  tile_stats_count">
-									<span class="count_top"><i class="fa fa-user"></i> Total Online Modems</span>
-									<div class="count">27,435 </div>
-								</div>
-
-
-
-					</div>
-				</div>-->
-	<meta http-equiv="refresh" content="60">
+				<meta http-equiv="refresh" content="60">
 				<hr>
 				<div class="col-md-12 col-sm-12 ">
 						<div class="x_panel">
@@ -69,6 +45,7 @@ include ('header.php');
 <?php
 $result = mysqli_query($con,"select tbl_host.hostname,
 		tbl_node.interface,
+		tbl_node.id,
 		tbl_node.description,
 		tbl_node.online,
 		tbl_node.last_update,SEC_TO_TIME(TIME_TO_SEC(CURRENT_TIMESTAMP - last_update)) as Duration from tbl_node JOIN tbl_host on tbl_host.id=tbl_node.hid where online=0 ORDER by Duration DESC
@@ -83,7 +60,7 @@ while($row = mysqli_fetch_array($result))
 		echo "<td>".$row['Duration']."</td>";
 		echo "<td>
 		<div class='btn-group mr-2' role='group' aria-label='First group'>
-		<a href='action1.php?host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."' class='btn btn-secondary mr-2' name='Sagar'>ACK</a>
+		<a href='action.php?acknowledge&host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."&nid=".$row['id']."' class='btn btn-secondary mr-2' name='acknowledge'>ACK</a>
 		</div>
 				</td>";
 		echo "</tr>";

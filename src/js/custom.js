@@ -237,12 +237,26 @@ $(document).ready(function() {
 });
 
 // NProgress
-if (typeof NProgress != 'undefined') {
-    $(document).ready(function () {
-        NProgress.start();
-    });
+		if (typeof NProgress != 'undefined') {
+				$(document).ready(function () {
+						NProgress.start();
+				});
 
-    $(window).on('load', function() {
-        NProgress.done();
-    });
-}
+				$(window).on('load', function() {
+						NProgress.done();
+				});
+		}
+
+		// Validation
+$(document).ready(function() {
+  $("#add_reasons").validate({
+    rules: {
+      dept : {
+        required: true,
+      },
+			reason: {
+				required:" Please enter a valid reason",
+				}
+    }
+  });
+});

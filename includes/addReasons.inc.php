@@ -5,8 +5,7 @@ if(isset($_POST['addreasons'])){
 		$reason = $_POST['reason'];
 
 		if(empty($dept) || empty($reason)){
-				echo "empty";
-				header("refresh:2;url=../add_reasons.php?dept=".$dept."&reason=".$reason);
+				header("location:../add_reasons.php?dept=".$dept."&reason=".$reason);
 		}
 		else{
 				$sql = "INSERT INTO tbl_reasons (description, conDeptId) VALUES ('$reason','$dept')";

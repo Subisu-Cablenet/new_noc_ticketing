@@ -11,20 +11,20 @@ include ('header.php');
 	<div class="form-group row">
 		<label for="departmentName" class="col-sm-2 col-form-label">Department Name</label>
 		<div class="col-sm-10">
-			<input type="text" class="form-control" id="" placeholder="Department Name" name="dept_name">
+		<input type="text" class="form-control" id="" value="<?php echo $_GET['dept_name']; ?>" placeholder="Department Name" name="dept_name">
 		</div>
 	</div>
 	<div class="form-group row">
 		<label for="departmentHead" class="col-sm-2 col-form-label">Department Head</label>
 		<div class="col-sm-10">
-			<input type="text" class="form-control" id="" placeholder="Department Head" name="dept_head">
+		<input type="text" class="form-control" id="" value="<?php echo $_GET['dept_head']; ?>" placeholder="Department Head" name="dept_head">
 </div>
 </div>
 
 	<div class="form-group row">
                 <label for="departmentEmail" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                        <input type="text" class="form-control" id="" placeholder="Department Head-Email" name="email">
+								<input type="text" class="form-control" id="" value="<?php echo $_GET['email'] ?>" placeholder="Department Head-Email" name="email">
                 </div>
         </div>
 

@@ -7,7 +7,7 @@ include ('header.php');
 	<h1>Form - Reasons</h1>
 </center>
 <div class="centerForm">
-<form method="POST" action="./includes/addReasons.inc.php">
+<form method="POST" action="./includes/addReasons.inc.php" id="add_reasons">
 				<div class="form-group row">
 						<label for="dept_select" class="col-sm-2 col-form-label">Concerned Department</label>
 						<div class="col-sm-10">
