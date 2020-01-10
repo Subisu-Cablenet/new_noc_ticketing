@@ -34,7 +34,6 @@ include ('header.php');
 <th>CMTS</th>
 <th>Interface</th>
 <th>Description</th>
-<th>Date & Time</th>
 <th>Down Time</th>
 <th>Assigned To</th>
 <th>Remark</th>
@@ -47,7 +46,7 @@ include ('header.php');
 <tbody>
 <?php
 //here join three tables tbl_host,tbl_node and tbl_ack for extracting combined data.
-$result = mysqli_query($con,"SELECT hostname,interface,description,downtime,assign,remark FROM tbl_node n JOIN Register r ON e.emp_id=r.emp_id JOIN Department d ON r.dept_id=d.dept_id;");
+$result = mysqli_query($con,"SELECT hostname,interface,description,downtime,assign,remark FROM tbl_host h JOIN tbl_node n ON h.id=n.hid JOIN tbl_ack a ON n.hid=a.nid;");
 while($row = mysqli_fetch_array($result))
 {
 	echo "<tr style='background-color:#ff8378'>";
@@ -55,7 +54,6 @@ while($row = mysqli_fetch_array($result))
 	echo "<td>".$row['interface']."</td>";
 	echo "<td>".$row['description']."</td>";
 	echo "<td>".$row['last_update']."</td>";
-	echo "<td>".$row['Duration']."</td>";
 	echo "<td>".$row['assign']."</td>";
 	echo "<td>".$row['remark']."</td>";
 
