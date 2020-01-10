@@ -48,22 +48,33 @@ $result = mysqli_query($con,"select tbl_host.hostname,
 		tbl_node.id,
 		tbl_node.description,
 		tbl_node.online,
+		tbl_node.ack_status,
 		tbl_node.last_update,SEC_TO_TIME(TIME_TO_SEC(CURRENT_TIMESTAMP - last_update)) as Duration from tbl_node JOIN tbl_host on tbl_host.id=tbl_node.hid where online=0 ORDER by Duration DESC
 		");
 while($row = mysqli_fetch_array($result))
 {
-		echo "<tr style='background-color:#ff8378'>";
+		$acknowledged = ($row['ack_status'] == 1? True:False);
+		$light_red =  "style='background-color:#f99'>";
+		$dark_read = "style='background-color:#f66'>";
+		echo "<tr ",$acknowledged?$light_red : $dark_read ;
 		echo "<td>".$row['hostname']."</td>";
 		echo "<td>".$row['interface']."</td>";
 		echo "<td>".$row['description']."</td>";
 		echo "<td>".$row['last_update']."</td>";
 		echo "<td>".$row['Duration']."</td>";
 		echo "<td>
-		<div class='btn-group mr-2' role='group' aria-label='First group'>
-		<a href='action.php?acknowledge&host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."&nid=".$row['id']."' class='btn btn-secondary mr-2' name='acknowledge'>ACK</a>
-		</div>
-				</td>";
-		echo "</tr>";
+		<div class='btn-group mr-2' role='group' aria-label='First group'>";
+		if($acknowledged){
+
+		echo "<a href='#' class='btn btn-secondary mr-2' name='acknowledge'>Acknowledge</a>";
+		}
+		else{
+				echo "<a href='action.php?acknowledge&host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."&nid=".$row['id']."' class='btn btn-secondary mr-2' name='acknowledge'>ACK</a>";
+
+		}
+		echo "</div>
+				</td>
+		</tr>";
 }
 mysqli_close($con);
 ?>

@@ -68,7 +68,8 @@
 		<!-- for front form validation -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 		<!-- Custom Theme Scripts -->
-		<script src="build/js/custom.min.js"></script>
+		<!-- *************** custom css temporarily removed for hamburger menu *********-->
+		<!-- <script src="build/js/custom.min.js"></script> -->
 		<!-- delete the below line -->
 		<script src="src/js/custom.js"></script>
 	</body>
