@@ -42,34 +42,23 @@ include ('header.php');
 														</thead>
 
 
-														<tbody>
-														<?php
-														//here join three tables tbl_host,tbl_node and tbl_ack for extracting combined data.
-														$result = mysqli_query($con,"SELECT hostname,interface,description,downtime,assign,remark FROM tbl_host h JOIN tbl_node n ON h.id=n.hid JOIN tbl_ack a ON n.id=a.nid ORDER BY a.status ASC;");//Initially showing the down but acknowledged nodes in the table using order by a.status asc
-														while($row = mysqli_fetch_array($result))
-														{
-														echo "<tr style='background-color:#ff8378'>";
-																echo "<td>".$row['hostname']."</td>";
-																echo "<td>".$row['interface']."</td>";
-																echo "<td>".$row['description']."</td>";
-																echo "<td>".$row['last_update']."</td>";
-																echo "<td>".$row['assign']."</td>";
-																echo "<td>".$row['remark']."</td>";
-																echo "<td>
-																		<div class='btn-group mr-2' role='group' aria-label='First group'>
-																				<a href='#'>Action here</a>
-																		</div>
-																</td>";
-																echo "</tr>";
-														}
-														mysqli_close($con);
-														?>
-														</tbody>
-												</table>
-										</div>
-								</div>
-						</div>
-				</div>
+<tbody>
+<?php
+//here join three tables tbl_host,tbl_node and tbl_ack for extracting combined data.
+$result = mysqli_query($con,"SELECT hostname,interface,description,downtime,assign,remark FROM tbl_host h JOIN tbl_node n ON h.id=n.hid JOIN tbl_ack a ON n.id=a.nid ORDER BY a.node_status ASC;");//Initially showing the down but acknowledged nodes in the table using order by a.status asc
+while($row = mysqli_fetch_array($result))
+{
+	echo "<tr style='background-color:#ff8378'>";
+	echo "<td>".$row['hostname']."</td>";
+	echo "<td>".$row['interface']."</td>";
+	echo "<td>".$row['description']."</td>";
+	echo "<td>".$row['last_update']."</td>";
+	echo "<td>".$row['assign']."</td>";
+	echo "<td>".$row['remark']."</td>";
+
+	echo "<td>
+		<div class='btn-group mr-2' role='group' aria-label='First group'>
+		<a href='#'>Action here</a>
 		</div>
 
 </div>
