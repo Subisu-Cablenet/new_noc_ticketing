@@ -21,7 +21,8 @@ function add_to_database($con){
 		$sql = "insert into tbl_ack (nid,downtime,status,subReasonId,assign,remark)
 																values('$nid','$down_time',0,'$reason','$submitted_to','$remark')";
 
-		if($con->query($sql)){
+		$sql2 = "update tbl_node set ack_status = 1 where id = ".$nid;
+		if($con->query($sql) && $con->query($sql2)){
 		echo "<script>";
                 echo "alert('Succesfully Acknowledged redirecting you to index page');";
                 echo "window.location.replace('../index.php');";
@@ -32,5 +33,4 @@ function add_to_database($con){
 		}
 
 }
-
 ?>

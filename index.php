@@ -64,10 +64,17 @@ while($row = mysqli_fetch_array($result))
 		echo "<td>".$row['Duration']."</td>";
 		echo "<td>
 		<div class='btn-group mr-2' role='group' aria-label='First group'>";
-		echo "<a href='action.php?acknowledge&host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."&nid=".$row['id']."' class='btn btn-secondary mr-2' name='acknowledge'>ACK</a>
-		</div>
-				</td>";
-		echo "</tr>";
+		if($acknowledged){
+
+		echo "<a href='#' class='btn btn-secondary mr-2' name='acknowledge'>Acknowledge</a>";
+		}
+		else{
+				echo "<a href='action.php?acknowledge&host=".$row['hostname']."&port=".$row['interface']."&port_desc=".$row['description']."&duration=".$row['Duration']."&nid=".$row['id']."' class='btn btn-secondary mr-2' name='acknowledge'>ACK</a>";
+
+		}
+		echo "</div>
+				</td>
+		</tr>";
 }
 mysqli_close($con);
 ?>
