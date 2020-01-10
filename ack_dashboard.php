@@ -72,8 +72,10 @@ mysqli_close($con);
 </div>
 </div>
 </div>
+<div class="form-group">
+<center><button class="btn btn-primary ml-auto">Export</button><center>
 </div>
-
+</div>
 </div>
 
 <?php
