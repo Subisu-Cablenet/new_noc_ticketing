@@ -22,7 +22,10 @@ function add_to_database($con){
 																values('$nid','$down_time',0,'$reason','$submitted_to','$remark')";
 
 		if($con->query($sql)){
-				echo "inserted";
+		echo "<script>";
+                echo "alert('Succesfully Acknowledged redirecting you to index page');";
+                echo "window.location.replace('../index.php');";
+                echo "</script>";
 		}
 		else{
 				echo "not inserted";

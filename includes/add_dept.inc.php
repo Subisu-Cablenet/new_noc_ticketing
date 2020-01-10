@@ -2,7 +2,6 @@
 		require("../conf.php");
 
 		if(isset($_POST['add_dept'])){
-
 		$dept_name=$_POST['dept_name'];
 		$dept_head=$_POST['dept_head'];
 		$email=$_POST['email'];
