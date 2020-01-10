@@ -9,16 +9,17 @@ if(!isset($_GET['acknowledge'])){
 <form class="action_form mx-5" action="includes/acknowledge.inc.php" method="POST">
 		<div class="form-group">
 				<div class="row">
-						<div class="col-md-6">
-								<label class="action_label">Host Name</label>
-								<label class="d-block action_data"><?php echo $_GET['host'] ?></label>
-								<input type="text" hidden class="form-control" value="<?php echo $_GET['host'] ?>" name="hostname">
-						</div>
+					<div class="col-md-6">
+					<label class="action_label">Host Name</label>
+					<label class="d-block action_data"><?php echo $_GET['host'] ?></label>
+		<input type="text" hidden class="form-control" value="<?php echo $_GET['host'] ?>" name="hostname">
+				</div>
+
 						<div class="col-md-6">
 								<label class="action_label">Port No:</label>
 								<label class="d-block action_data"><?php echo $_GET['port'] ?></label>
-								<input type="text" hidden class="form-control" value="<?php echo $_GET['port'] ?>" name="port">
-						</div>
+		<input type="text" hidden class="form-control" value="<?php echo $_GET['port'] ?>" name="port">
+				</div>
 				</div>
 				<div class="row">
 						<div class="col-md-6">

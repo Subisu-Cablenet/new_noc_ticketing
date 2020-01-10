@@ -18,8 +18,7 @@ function add_to_database($con){
 		$remark = $_POST['remark'];
 		$nid = $_POST['nid'];
 
-		$sql = "insert into tbl_ack (nid,downtime,status,subReasonId,assign,remark)
-																values('$nid','$down_time',0,'$reason','$submitted_to','$remark')";
+		$sql = "insert into tbl_ack(nid,downtime,status,subReasonId,assign,remark)values('$nid','$down_time',0,'$reason','$submitted_to','$remark')";
 
 		if($con->query($sql)){
 				echo "inserted";
