@@ -46,7 +46,7 @@ include ('header.php');
 <tbody>
 <?php
 //here join three tables tbl_host,tbl_node and tbl_ack for extracting combined data.
-$result = mysqli_query($con,"SELECT hostname,interface,description,downtime,assign,remark FROM tbl_host h JOIN tbl_node n ON h.id=n.hid JOIN tbl_ack a ON n.hid=a.nid;");
+$result = mysqli_query($con,"SELECT hostname,interface,description,downtime,assign,remark FROM tbl_host h JOIN tbl_node n ON h.id=n.hid JOIN tbl_ack a ON n.id=a.nid;");
 while($row = mysqli_fetch_array($result))
 {
 	echo "<tr style='background-color:#ff8378'>";
