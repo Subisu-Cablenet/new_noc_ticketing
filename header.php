@@ -72,7 +72,8 @@ session_start();
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.php">Down Node</a></li>
-                      <li><a href="nodelist.php">All Node</a></li>
+		      <li><a href="nodelist.php">All Node</a></li>
+			<li><a href="ack_dashboard.php">Acknowledged Nodes</a></li>
 			 <li><a href="add_dept.php">Add Department</a></li>
 			 <li><a href="add_reasons.php">Add Reasons</a></li>
 			 <li><a href="add_sub_reasons.php">Add Sub-Reasons</a></li>
