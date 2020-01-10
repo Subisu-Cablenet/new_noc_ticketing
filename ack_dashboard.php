@@ -60,9 +60,10 @@ while($row = mysqli_fetch_array($result))
 		<div class='btn-group mr-2' role='group' aria-label='First group'>
 		<a href='#'>Action here</a>
 		</div>
+		</td></div>";
 
-</div>
-
+}
+?>
 <?php
 include ('footer.php');
 ?>
