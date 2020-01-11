@@ -37,6 +37,7 @@ include ('header.php');
 									<th>Interface</th>
 									<th>Description</th>
 									<th>Down Time</th>
+
 									<th>Assigned To</th>
 									<th>Remark</th>
 									<th>Action</th>

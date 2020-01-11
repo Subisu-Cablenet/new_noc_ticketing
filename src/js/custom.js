@@ -248,7 +248,7 @@ $(document).ready(function() {
 		}
 
 		// Validation
-$(document).ready(function() {
+/*$(document).ready(function() {
   $("#add_reasons").validate({
     rules: {
       dept : {
@@ -259,4 +259,4 @@ $(document).ready(function() {
 				}
     }
   });
-});
+});*/
