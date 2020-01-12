@@ -31,7 +31,7 @@ include ('header.php');
 		<div class="col-sm-12">
 		<div class="card-box table-responsive">
 		
-		<table id="datatable-fixed-header" class="table table-striped table-bordered" style="width:100%">
+		<table id="table_ack" class="exportTable table table-striped table-bordered" style="width:100%">
 							<thead>
 								<tr>
 									<th>Host Name</th>
@@ -73,7 +73,9 @@ include ('header.php');
 			</div>
 		</div>
 		<div class="form-group">
-			<center><button id="tbl_export_btn" class="btn btn-primary ml-auto">Export</button><center>
+			<center>
+				<button id="tbl_export_btn" class="btn btn-primary ml-auto">Export</button>
+<center>
 				</div>
 			</div>
 </div>

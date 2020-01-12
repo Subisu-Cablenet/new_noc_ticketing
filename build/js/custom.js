@@ -2549,7 +2549,7 @@ if (typeof NProgress != 'undefined') {
 				//adding code here for filter option
 				//code ends here for filter 
 				$('#datatable-fixed-header').DataTable({
-				  fixedHeader: true
+				  fixedHeader: true,
 				});
 
 				var $datatable = $('#datatable-checkbox');

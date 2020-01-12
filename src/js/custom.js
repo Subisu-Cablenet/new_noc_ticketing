@@ -97,7 +97,6 @@ $(document).ready(function() {
         });
     }
 });
-// /Sidebar
 
 // Panel toolbox
 $(document).ready(function() {
@@ -166,7 +165,6 @@ $(document).ready(function() {
             });
         });
     }
-});
 // /iCheck
 
 // Table
@@ -221,9 +219,7 @@ function countChecked() {
         $('.bulk-actions').hide();
     }
 }
-
 // Accordion
-$(document).ready(function() {
     $(".expand").on("click", function () {
         $(this).next().slideToggle(200);
         $expand = $(this).find(">:first-child");
@@ -234,38 +230,32 @@ $(document).ready(function() {
             $expand.text("+");
         }
     });
-});
 
 // NProgress
-		if (typeof NProgress != 'undefined') {
-				$(document).ready(function () {
-						NProgress.start();
-				});
+if (typeof NProgress != 'undefined') {
+		$(document).ready(function () {
+				NProgress.start();
+		});
 
-				$(window).on('load', function() {
-						NProgress.done();
-				});
-		}
+		$(window).on('load', function() {
+				NProgress.done();
+		});
+}
 
-		// Validation
-/*$(document).ready(function() {
-  $("#add_reasons").validate({
-    rules: {
-      dept : {
-        required: true,
-      },
-			reason: {
-				required:" Please enter a valid reason",
-				}
-    }
-  });
-<<<<<<< HEAD
-});*/
-=======
+
+
+		// For Exporting Button
+				$('#table_ack').DataTable({
+"dom": '<"row d-block"<"col-md-4"l><"col-md-4"><"col-md-4 ml-auto"f>>t<"bottom"pi>',
+						buttons: [
+												'copyHtml5',
+												'excelHtml5',
+												'csvHtml5',
+												'pdfHtml5',
+												'colvis'
+
+										],
+								"pageLength": 20,
+								"fixedHeader":true,
+		});
 });
-*/
-
-
-
-
->>>>>>> local_noc
