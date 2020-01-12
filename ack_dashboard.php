@@ -37,9 +37,8 @@ include ('header.php');
 									<th>Host Name</th>
 									<th>Interface</th>
 									<th>Description</th>
-									<th>Assigned To</th>
-									<th>Remark</th> --> <!--Uncommenting columns -->
-							<th>Action</th>
+									<th>Down Time</th>
+									<th>Action</th>
 
 								</tr>
 							</thead>
@@ -56,9 +55,7 @@ include ('header.php');
 								echo "<td>".$row['hostname']."</td>";
 								echo "<td>".$row['interface']."</td>";
 								echo "<td>".$row['description']."</td>";
-							/*	echo "<td>".$row['downtime']."</td>";
-								echo "<td>".$row['assign']."</td>";
-								echo "<td>".$row['remark']."</td>"; */
+								echo "<td>".$row['downtime']."</td>";
 
 								echo "<td>
 									<div class='btn-group mr-2' role='group' aria-label='First group'>
