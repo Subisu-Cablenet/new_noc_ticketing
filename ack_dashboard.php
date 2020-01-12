@@ -41,7 +41,17 @@ include ('header.php');
 									<th>Action</th>
 
 								</tr>
-							</thead>
+								<tr id="filters">
+									<th>Host Name</th>
+									<th>Interface</th>
+									<th>Description</th>
+									<th>Down Time</th>
+									<th>Action</th>	
+
+								</tr>
+
+
+	</thead>
 
 
 							<tbody>
@@ -66,6 +76,7 @@ include ('header.php');
 							mysqli_close($con);
 							?>
 							</tbody>
+
 						</table>
 					</div>
 				</div>

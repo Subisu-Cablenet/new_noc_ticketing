@@ -246,7 +246,8 @@ $(document).ready(function() {
 
 	// For Exporting Button
 	$('#table_ack').DataTable({
-		"dom": '<"row d-block"B<"col-md-4"l><"col-md-4"><"col-md-4 ml-auto"f>>t<"bottom"pi>',
+       //creating three columns for l=show entries,B=Buttons,f=filter,t=table,p=pagination,i=info
+		"dom": '<"row d-block"<"col-md-4"l><"col-md-4"B><"col-md-4 ml-auto"f>>t<"bottom"pi>',
 		buttons: [
 		{
 			extend:'csv',
@@ -264,7 +265,8 @@ $(document).ready(function() {
 		{
 			extend:'pdf',
 			exportOptions:{
-				columns:[0,1,2,3,4]
+				columns:[0,1,2,3,4],
+				 rows: ':not(:first)'
 			}
 		},
 		
@@ -273,7 +275,31 @@ $(document).ready(function() {
 		        
 			            
 		],
+
 		"pageLength": 20,
 		"fixedHeader":true,
+//api for custom search every columns
+      
+	initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+//api ends here
 	});
 });
