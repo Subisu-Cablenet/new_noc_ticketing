@@ -27,18 +27,18 @@ include ('header.php');
 			<div class="clearfix"></div>
 		</div>
 		<div class="x_content">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="card-box table-responsive">
-						<table id="datatable-fixed-header tbl_ack" class="table table-striped table-bordered" style="width:100%">
+		<div class="row">
+		<div class="col-sm-12">
+		<div class="card-box table-responsive">
+		<table id="datatable-fixed-header" class="table table-striped table-bordered" style="width:100%">
 							<thead>
 								<tr>
 									<th>Host Name</th>
 									<th>Interface</th>
 									<th>Description</th>
-									<th>Down Time</th>
+								<!--	<th>Down Time</th>
 									<th>Assigned To</th>
-									<th>Remark</th>
+									<th>Remark</th> --> <!--Uncommenting columns -->
 									<th>Action</th>
 
 								</tr>
@@ -56,9 +56,9 @@ include ('header.php');
 								echo "<td>".$row['hostname']."</td>";
 								echo "<td>".$row['interface']."</td>";
 								echo "<td>".$row['description']."</td>";
-								echo "<td>".$row['downtime']."</td>";
+							/*	echo "<td>".$row['downtime']."</td>";
 								echo "<td>".$row['assign']."</td>";
-								echo "<td>".$row['remark']."</td>";
+								echo "<td>".$row['remark']."</td>"; */
 
 								echo "<td>
 									<div class='btn-group mr-2' role='group' aria-label='First group'>
