@@ -56,7 +56,6 @@ include ('header.php');
 								echo "<td>".$row['interface']."</td>";
 								echo "<td>".$row['description']."</td>";
 								echo "<td>".$row['downtime']."</td>";
-
 								echo "<td>
 									<div class='btn-group mr-2' role='group' aria-label='First group'>
 										<a href='#'>Action here</a>
