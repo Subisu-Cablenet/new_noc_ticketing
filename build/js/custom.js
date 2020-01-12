@@ -2545,6 +2545,9 @@ if (typeof NProgress != 'undefined') {
 				  scroller: true
 				});
 
+
+				//adding code here for filter option
+				//code ends here for filter 
 				$('#datatable-fixed-header').DataTable({
 				  fixedHeader: true
 				});

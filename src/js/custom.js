@@ -259,4 +259,13 @@ $(document).ready(function() {
 				}
     }
   });
+<<<<<<< HEAD
 });*/
+=======
+});
+*/
+
+
+
+
+>>>>>>> local_noc
